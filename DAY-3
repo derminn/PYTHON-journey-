@@ -1,0 +1,21 @@
+#robot barista 
+
+name = input("what is your name?\n")
+print("hello" + name + "thank you so much for coming at our shop today\n\n\n")
+menu = "hot chocolate\n  espresso \n  americano\n "
+print(name + " , what would you like to have from our menu today? here is what we are offering today : \n" + menu)
+order = input()
+price = 8
+quantity = input("how many coffee would you like to have ?\n")
+total = price * int(quantity)
+print("Thank you. Your total is : $" + str(total) )
+print("sound good " + name + " , we will have your " + quantity + "  " + order + "ready in the moment") 
+
+------------------------------------------------------------------------------------------------------
+
+on DAY-3, i implemented the previous principles and made a full blown robot barista which includes :
+1. asking a customers name 
+2. greeting a customer 
+3. offering menu
+3. taking order 
+4. generating bill 
