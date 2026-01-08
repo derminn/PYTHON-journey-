@@ -1,1 +1,30 @@
+#starting a coffee shop together 
+#building  ROBOT BARISTA 
 
+print("hello, welcome to the mommy's coffee ")
+
+name = input("what is your name mf? ")
+
+print("HELLO " + name + " ,thank you so much for cuming in today.\n\n\n")
+
+menu = "breastmilk ,  AMERICANO , ESPRESSO , CAPUCCINO "
+
+print( name + " what would you like to have from our menu today? here is what we are serving today. \n" + menu)
+
+order = input()
+
+print("sounds gr8 " + name + ", we'll have that " + order + "ready for you in secs")
+
+ #boring ass numbers 
+
+name = "dermicool"
+
+age = 6.9
+
+actual_age = 32
+
+math = 5**7 + 6 / 9 * 6 - 4
+
+result = math + age + actual_age
+
+print(result)
