@@ -1,10 +1,4 @@
-#if-else statement in python 
-name = input("what is your name? \n")
-if name == "ben" :
-    print("you aint welcome here ")
-    exit()
-else:
-    print("hello " + name + " , welcome to our shop ")
+
 
 #checking data types
 print(type(name))                #STRING
