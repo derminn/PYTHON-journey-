@@ -1,1 +1,66 @@
+#if-else statement in python 
+name = input("what is your name? \n")
+if name == "ben" :
+    print("you aint welcome here ")
+    exit()
+else:
+    print("hello " + name + " , welcome to our shop ")
 
+#checking data types
+print(type(name))                #STRING
+print(type(8))                   #INTEGER
+print(type([1, 2, 3]))           # List : a built-in data type that stores an ordered collection of items, which can be of different types
+print(type({'name':'Asabeneh'})) # Dictionary : a built-in data type that stores data in key-value pairs, where each key is unique and maps to a corresponding value
+print(type({9.8, 3.14, 2.7}))    # Tuple : a tuple is a built-in data type used to store an ordered, immutable collection of items
+print(type(1 + 3j))              # Complex Number : a built-in data type used to represent complex numbers, which consist of a real part and an imaginary part  
+print(type(True))                # boolean : a built-in data type that represents one of two values: True or False
+print(type(zip([1,2],[3,4])))    # set : a built-in data type that stores an unordered collection of unique items     
+
+#built-in data types in python
+len(name) # to check the length of the string
+str(100) # to convert a number to string
+int("100") # to convert a string to integer
+float("9.8") # to convert a string to float
+complex(1, 3) # to convert two numbers to a complex number
+list("hello") # to convert a string to a list of characters
+min([1, 2, 3, 4, 5]) # to find the minimum value in a list
+max([1, 2, 3, 4, 5]) # to find the maximum value in a list
+sum([1, 2, 3, 4, 5]) # to find the sum of all values in a list
+
+#type casting in python
+
+## int to float 
+num_int = 10
+print("num_int", num_int)
+num_float = float(num_int)
+print("num_float:", num_float)
+
+## float to int
+gravity = 9.80
+print(int(gravity))
+
+## int to string
+num_int = 10
+print("num_int", num_int)
+num_str = str(num_int)
+print("num_str:",num_str)
+
+##str to int
+num = 10
+print('num' ,int(num))
+print("num", float(num))
+
+## str to list 
+first = "dermicool"
+print(first)
+name_to_list = list(first)
+print(name_to_list)
+
+## multiple assignment
+
+first_name , last_name = "dharmin" , "panchal"
+print("hello" , first_name , last_name)
+
+#finding number of characters 
+name = "dharmin"
+len(name)
