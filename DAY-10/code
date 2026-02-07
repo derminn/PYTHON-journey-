@@ -1,0 +1,423 @@
+#LOOPING THROUGH TUPLES 
+
+##for loop
+colors = ("red","blue","pink")
+for color in colors:
+    print(color)
+
+# loop using index 
+colors = ("red","blue","pink")
+
+for i in range(len(colors)):
+    print(i, colors[i])
+
+## acess index + value together 
+
+fruits = ("apple","banana", "mang0")
+
+for i in range(len(fruits)):
+    print(f"index {i} -- {fruits[i]}")
+
+##using index for logic :
+
+data = (5,10,15,20,25)
+
+for i in range(len(data)):
+ if i%2==0:
+    print(data[i])
+
+##comparing neighbouring elements  
+
+nums = (3, 8, 2, 9)
+
+for i in range(len(nums) - 1):
+    if nums[i] < nums[i + 1]:
+        print(nums[i], "is smaller than", nums[i + 1])
+
+## REVERSE LOOPING USING INDEX
+
+letters = ("a","b","c","d")
+for i in range(len(letters)-1,-1,-1):
+   print(i,letters[i])
+
+   t = (1, 2, 3)
+for i in range(len(t)):
+    print(t[i] * 2)
+
+## nested loops + index loop 
+
+pairs = ((1, 2), (3, 4), (5, 6))
+
+for i in range(len(pairs)):
+    print("Pair", i, "=", pairs[i])
+
+
+# enumerate 
+
+names = ("dermin", "derminotsocool","dermicool")
+for index,value in enumerate(names):
+    print(index ,"=", value)
+
+# while loops in tuples
+
+#nested loop with index value 
+
+data = ((10,20),(30,40)(50,60))
+
+for i in range(len(data)):
+    print("outer index: ",i)    
+
+# reverse looping using while 
+
+t = (1,2,3,4,5)
+
+t = len(t)-1
+while i>=0:
+    print(t[i])
+    i-=1
+
+# looping with index + value together 
+t = ("apple","banana","mango")
+
+i = 0
+while i<len(t):
+    print("index",i,"value",t[i])
+    i+=1
+
+# while loop with conditional logic on tuple values 
+
+t = (1,2,3,4,5,6,7)
+
+i = 0 
+
+while i<len(t):
+    if i%2==0:
+        print(t[i], "is even")
+    else:
+        print(t[i], "is odd")
+    i+=0
+
+
+#tuple unpacking inside loop 
+
+data = ((1,2) , (3,4) ,(5,6))
+
+for a,b in data:
+    print("a=", a, "b=", b)
+
+# looping through tuples of mixed data 
+
+info = ("dermin",21,True,9.5)
+
+for item in info:
+    print(item , type(item))
+
+
+# tuple comprehension 
+t = tuple(x*x for x in range(5))
+
+
+#immutability of tuples but the nuance is that the object inside it may change 
+t[1].append(4)
+
+print(t)
+
+# tuple packing and unpacking 
+
+##packing 
+t= 10,20,30
+
+##unpacking 
+
+a,b,c = t 
+print(a,b,c)
+
+## swapping values 
+
+x = 5 
+y = 20
+
+x,y = y,x
+
+print(x)
+
+# returning multiple values from functions 
+
+def calc(a,b):
+    return a+b , a-b 
+result = calc (10,15)
+print(float(result))
+
+# tuple methods 
+
+t = (1,2,3,4,4,5,6,6,7,7,8)
+
+t.count(2) # how many times 2 appear  
+t.index(4) #index of 4
+
+
+# converting between list and tuple 
+t = (1,2,3)
+
+nig = list(t)
+nig.append(4)
+
+t=tuple(list)
+print(t)
+
+#nested tuples
+data = (
+    ("Aman", 20),
+    ("Riya", 22),
+    ("Kunal", 19)
+)
+
+for name, age in data:
+    print(name, age)
+
+
+
+
+
+
+# tuples unpacking :
+
+t = (5,20)
+a, b = t
+print(a," \n ", b)
+
+# swap values using python unpacking 
+a = 100
+b = 200
+a,b = b,a 
+print(a,b)
+
+#loop unpacking 
+data = ((1,2),(3,4),(5,6))
+for a, b in data:
+    print(a+b)
+
+#practice :
+data = (("apple", 50), ("banana", 30), ("mango", 80))
+for a, b in data:
+    print(f"{a} price is ${b}")
+for a, b in data:
+    if b>40:
+        print(f"{a} is expensive.\n")
+
+
+#enumerate 
+names = ("dermin","jynx","fronx")
+for index,value in enumerate(names,start=1):
+    print(index,"->",value)
+
+
+#find index of a target
+
+data = ("ok","ok","error","ok")
+for i,status in enumerate(data,start=1):
+    if status == "error":
+        print("Error found at inddex postion :",i)
+    
+#practice:
+colors = ("red", "blue", "green", "yellow")
+for i,name in enumerate(colors,start=1):
+    print(i, "->",name)
+
+nums = (5, 10, 5, 20, 5)
+for i , num in enumerate(nums, start=1):
+    if num == 5:
+        print(f"5 is found at position:{i}")
+    
+#zip 
+names = ("ram","shyam","jynx")
+marks = (10,20,30)
+for name,mark in zip(names,marks):
+    print(name, "scored" , mark)
+
+## shortest length wins 
+a = (1,2,3,4,5)
+b = (40,50)
+
+for x,y in zip(a,b):
+    print(x ,"-" ,y)
+
+##debugging use IRL:
+users = ("u1","u2","u3")
+status = ("ok","error","ok")
+
+for user,st in zip(users,status):
+    if st == "error":
+        print(f"error found for user :{user}")
+
+#tasks 
+subjects = ("Math", "Science", "English")
+scores = (90, 75, 88)
+for sub,score in zip(subjects,scores):
+    print(sub, "->",score )
+
+names = ("ram", "shyam", "geeta", "mohan")
+marks = (40, 55, 90, 30)
+for name,mark in zip(names,marks):
+    if mark>50:
+        print(f"{name} passed with {mark}")
+
+
+#nested tuples 
+
+students = (
+    ("dermin", 80),
+    ("jynnx",40),
+    ("adel",35),
+    ("chris",90)
+)
+for name,marks in students:
+    print(name,marks)
+    if marks>=50:
+        print(f"{name} passed")
+    else:
+        print(f"{name} failed")
+
+
+passed_count = 0
+for name,marks in students:
+    if marks>=50:
+        passed_count += 1 
+print("total passed :",passed_count)
+
+
+topper_name = students[0][0]
+topper_marks = students[0][1]
+
+for name,marks in students:
+    if marks>topper_marks:
+        topper_marks = marks
+        topper_name = name 
+print("Topper:", topper_name, "with", topper_marks)
+
+#task 
+students = (
+    ("ram", 80),
+    ("shyam", 35),
+    ("geeta", 95),
+    ("mohan", 40)
+)
+for name,marks in students:
+    if marks>=50:
+        print(f"{name} is passed with {marks}")
+    else:
+        print(f"{name} is failed")
+highest = students[0][1]
+for name,marks in students:
+    if marks > highest:
+        highest=marks
+        topper=name
+print(f"{topper} got the highest marks which is :{highest}")
+
+failed = 0
+for name,marks in students:
+    if marks<50:
+        failed+=1
+print("total failed = ",failed)
+
+#final task 
+
+students = (
+    ("ram", 80),
+    ("shyam", 35),
+    ("geeta", 95),
+    ("mohan", 40),
+    ("raju", 50)
+)
+
+for name,marks in students:
+    if marks>=50:
+        print(f"{name} passed")
+    else:
+        print(f"{name} failed")
+
+count = 0 
+for name,marks in students:
+    if marks>=50:
+        count+=1
+print(f"students passed : \n",count)
+
+top = students[0][1]
+for name,marks in students:
+    if marks>top:
+        marks=top
+        topper=name
+print(f"{topper} got the highest marks which is :{top}")
+
+for name,marks in students:
+    if marks == 50:
+        print(f"{name} got exactly {marks}marks")
+
+#break and continue
+
+data = ((1,2,3), (4,5,6), (7,8,9))
+found = False
+for i in range(len(data)):
+    for j in range(len(data[i])):
+       if data[i][j] == 5:
+           print("found 5 at row->",i,"col->",j)
+           found = True
+           break 
+    if found:
+        break 
+
+data = ((1,2,3), (4,0,6), (7,8,9))
+for i in range(len(data)):
+    for j in range(len(data[i])):
+        if data[i][j] == 0:
+            continue   # skip zeros
+        print(data[i][j])
+
+#task-1
+data = (
+    (10, 20, 30),
+    (40, 50, 60),
+    (70, 80, 90)
+)
+
+found= False
+for i in range(len(data)):
+    for j in range(len(data[i])):
+        if data[i][j] == 50:
+            print(f"found 50 at row-> {i} and col->{j}")
+            found = True
+            break
+    if found:
+        break
+#task - 2:
+# Print ONLY odd numbers using continue
+# Expected output (order doesn’t matter as long as only odds print):
+# 1 3 5 7 9
+
+nums = (
+    (1, 2, 3),
+    (4, 5, 6),
+    (7, 8, 9)
+)
+for i in range(len(nums)):
+    for j in range(len(nums[i])):
+        if nums[i][j] %2 == 0:
+            continue  
+        print(data[i][j])
+
+
+#task - 3
+grid = (
+    (1, 0, 3),
+    (0, 5, 0),
+    (7, 8, 9)
+)
+
+count = 0
+
+for i in range(len(grid)):
+    for j in range(len(grid[i])):
+        if grid[i][j] == 0:
+            count += 1
+
+print("Total zeros found:", count)
